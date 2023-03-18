@@ -37,6 +37,34 @@ $(".open-nav").click(function () {
     });
     $(".close").addClass("fa-xmark");
   }
+
+
+  if (openOffset > 20) {
+    $(".header-icons").animate({ left: 230 }, 200);
+    $(".header-body").animate({ left: 0 }, 200, function () {
+      $("#search").animate(
+        { opacity: "1", paddingTop: "25px" },
+        { duration: 300, function() {} }
+      );
+      $("#categories").animate(
+        { opacity: "1", paddingTop: "25px" },
+        { duration: 500, function() {} }
+      );
+      $("#area").animate(
+        { opacity: "1", paddingTop: "25px" },
+        { duration: 700, function() {} }
+      );
+      $("#ingredients").animate(
+        { opacity: "1", paddingTop: "25px" },
+        { duration: 900, function() {} }
+      );
+      $("#contact").animate(
+        { opacity: "1", paddingTop: "25px" },
+        { duration: 1100, function() {} }
+      );
+    });
+    $(".close").addClass("fa-xmark");
+  }
   if (openOffset > 249) {
     $("#search").animate(
       { opacity: "0", paddingTop: "100px" },
